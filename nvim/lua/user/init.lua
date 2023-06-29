@@ -8,6 +8,15 @@ cmd [[
   augroup END
 ]]
 
+cmd [[
+  augroup expandtabFTW
+    autocmd!
+    autocmd FileType * setlocal softtabstop=4
+    autocmd FileType * setlocal tabstop=4
+    autocmd FileType * setlocal shiftwidth=4
+  augroup END
+]]
+
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -100,6 +109,12 @@ return {
   diagnostics = {
     virtual_text = true,
     underline = true,
+  },
+
+  plugins = {
+    init = {
+      ["Darazaki/indent-o-matic"] = { disable = true },
+    },
   },
 
 }
