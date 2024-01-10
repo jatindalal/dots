@@ -37,7 +37,7 @@ return {
   },
   
   -- Set colorscheme to use
-  colorscheme = "tokyonight",
+  colorscheme = "oxocarbon",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {

@@ -49,4 +49,9 @@ return {
       })
     end,
   },
+  {
+    'nyoom-engineering/oxocarbon.nvim',
+    config = function()
+    end,
+  },
 }
