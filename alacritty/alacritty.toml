@@ -1,0 +1,46 @@
+[colors.cursor]
+cursor = "0xcc1111"
+text = "0x181818"
+
+[colors.primary]
+background = "0x010101"
+
+[cursor]
+thickness=0.40
+
+[cursor.style]
+shape = "underline"
+
+[env]
+TERM = "xterm-256color"
+#WINIT_X11_SCALE_FACTOR = "1"
+
+[font]
+size = 14
+
+[font.normal]
+family = "Input Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "Right"
+mods = "Option"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Option"
+
+[window]
+dynamic_padding = false
+opacity = 0.90
+#decorations = "buttonless"
+
+[window.dimensions]
+columns = 120
+lines = 30
+
+[window.padding]
+x = 8
+y = 8
