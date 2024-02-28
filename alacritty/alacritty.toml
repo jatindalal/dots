@@ -5,8 +5,25 @@ text = "0x181818"
 [colors.primary]
 background = "0x010101"
 
-[cursor]
-thickness=0.40
+[colors.normal]
+black = "#414141"
+red = "#e17373"
+green = "#94b978"
+yellow = "#ffb97b"
+blue = "#96bddb"
+magenta = "#e1c0fa"
+cyan = "#00988e"
+white = "#dedede"
+
+[colors.bright]
+black = "#9d9d9d"
+red = "#ffa0a0"
+green = "#bddeab"
+yellow = "#ffdba0"
+blue = "#b1d7f6"
+magenta = "#fbdaff"
+cyan = "#19b2a7"
+white = "#ffffff"
 
 [cursor.style]
 shape = "underline"
@@ -16,26 +33,15 @@ TERM = "xterm-256color"
 #WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
-size = 14
+size = 8
 
 [font.normal]
-family = "Input Mono"
-style = "Regular"
-
-[[keyboard.bindings]]
-chars = "\u001BF"
-key = "Right"
-mods = "Option"
-
-[[keyboard.bindings]]
-chars = "\u001BB"
-key = "Left"
-mods = "Option"
+family = "Noto Sans Mono"
+style = "Medium"
 
 [window]
 dynamic_padding = false
-opacity = 0.90
-#decorations = "buttonless"
+opacity = 0.9
 
 [window.dimensions]
 columns = 120
