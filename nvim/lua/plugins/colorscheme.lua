@@ -42,11 +42,16 @@ return {
       },
     },
   },
-
+  {
+    "sainnhe/gruvbox-material",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "gruvbox-material",
     },
   },
 }
