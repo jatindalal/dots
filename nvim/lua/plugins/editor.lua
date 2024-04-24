@@ -10,15 +10,6 @@ return {
 		},
 		keys = {
 			{
-				"<leader>fP",
-				function()
-					require("telescope.builtin").find_files({
-						cwd = require("lazy.core.config").options.root,
-					})
-				end,
-				desc = "Find Plugin File",
-			},
-			{
 				";f",
 				function()
 					local builtin = require("telescope.builtin")
@@ -56,14 +47,6 @@ return {
 				desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
 			},
 			{
-				";;",
-				function()
-					local builtin = require("telescope.builtin")
-					builtin.resume()
-				end,
-				desc = "Resume the previous telescope picker",
-			},
-			{
 				";e",
 				function()
 					local builtin = require("telescope.builtin")
@@ -80,7 +63,7 @@ return {
 				desc = "Lists Function names, variables, from Treesitter",
 			},
 			{
-				"sf",
+				";;",
 				function()
 					local telescope = require("telescope")
 
