@@ -5,52 +5,44 @@ cursor = "0xcc1111"
 text = "0x181818"
 
 [colors.primary]
-background = "0x010101"
+background = '#000000'
+foreground = '#ffffff'
 
+# Normal colors
 [colors.normal]
-black = "#414141"
-red = "#e17373"
-green = "#94b978"
-yellow = "#ffb97b"
-blue = "#96bddb"
-magenta = "#e1c0fa"
-cyan = "#00988e"
-white = "#dedede"
+black = '#2e3436'
+red = '#cc0000'
+green = '#4e9a06'
+yellow = '#c4a000'
+blue = '#3465a4'
+magenta = '#75507b'
+cyan = '#06989a'
+white = '#d3d7cf'
 
 [colors.bright]
-black = "#9d9d9d"
-red = "#ffa0a0"
-green = "#bddeab"
-yellow = "#ffdba0"
-blue = "#b1d7f6"
-magenta = "#fbdaff"
-cyan = "#19b2a7"
-white = "#ffffff"
+black = '#555753'
+red = '#ef2929'
+green = '#8ae234'
+yellow = '#fce94f'
+blue = '#729fcf'
+magenta = '#ad7fa8'
+cyan = '#34e2e2'
+white = '#eeeeec'
 
-[cursor.style]
-shape = "underline"
+#[cursor.style]
+#shape = "underline"
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 15
+size = 9
 offset.x = 0
 offset.y = 1
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
-style = "Medium"
-
-[[keyboard.bindings]]
-chars = "\u001BF"
-key = "Right"
-mods = "Option"
-
-[[keyboard.bindings]]
-chars = "\u001BB"
-key = "Left"
-mods = "Option"
+family = "0xProto Nerd Font"
+style = "Regular"
 
 [window]
 dynamic_padding = false
@@ -60,8 +52,3 @@ decorations = "transparent"
 [window.dimensions]
 columns = 120
 lines = 30
-
-[window.padding]
-x = 25
-y = 25
-

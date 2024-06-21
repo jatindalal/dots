@@ -13,3 +13,4 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
 
 vim.g.autoformat = false
+vim.opt.guicursor = ""

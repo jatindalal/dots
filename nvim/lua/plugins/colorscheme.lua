@@ -14,8 +14,8 @@ return {
         functions = {},
         variables = {},
         -- Background styles. Can be "dark", "transparent" or "normal"
-        sidebars = "dark", -- style for sidebars, see below
-        floats = "dark", -- style for floating windows
+        sidebars = "transparent",
+        floats = "transparent",
       },
       sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
       day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
@@ -32,36 +32,36 @@ return {
       --- function will be called with a Highlights and ColorScheme table
       ---@param highlights Highlights
       ---@param colors ColorScheme
-      on_highlights = function(highlights, colors)
-        local prompt = "#2d3149"
-          highlights.TelescopeNormal = {
-          bg = colors.bg_dark,
-          fg = colors.fg_dark,
-          }
-          highlights.TelescopeBorder = {
-          bg = colors.bg_dark,
-          fg = colors.bg_dark,
-          }
-          highlights.TelescopePromptNormal = {
-          bg = prompt,
-          }
-          highlights.TelescopePromptBorder = {
-          bg = prompt,
-          fg = prompt,
-          }
-          highlights.TelescopePromptTitle = {
-          bg = prompt,
-          fg = prompt,
-          }
-          highlights.TelescopePreviewTitle = {
-          bg = colors.bg_dark,
-          fg = colors.bg_dark,
-          }
-          highlights.TelescopeResultsTitle = {
-          bg = colors.bg_dark,
-          fg = colors.bg_dark,
-          }
-      end,
+      -- on_highlights = function(highlights, colors)
+      --   local prompt = "#2d3149"
+      --     highlights.TelescopeNormal = {
+      --     bg = colors.bg_dark,
+      --     fg = colors.fg_dark,
+      --     }
+      --     highlights.TelescopeBorder = {
+      --     bg = colors.bg_dark,
+      --     fg = colors.bg_dark,
+      --     }
+      --     highlights.TelescopePromptNormal = {
+      --     bg = prompt,
+      --     }
+      --     highlights.TelescopePromptBorder = {
+      --     bg = prompt,
+      --     fg = prompt,
+      --     }
+      --     highlights.TelescopePromptTitle = {
+      --     bg = prompt,
+      --     fg = prompt,
+      --     }
+      --     highlights.TelescopePreviewTitle = {
+      --     bg = colors.bg_dark,
+      --     fg = colors.bg_dark,
+      --     }
+      --     highlights.TelescopeResultsTitle = {
+      --     bg = colors.bg_dark,
+      --     fg = colors.bg_dark,
+      --     }
+      -- end,
     },
   },
   {
