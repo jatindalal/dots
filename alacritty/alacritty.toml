@@ -29,6 +29,15 @@ magenta = '#ad7fa8'
 cyan = '#34e2e2'
 white = '#eeeeec'
 
+# Indexed Colors
+[[colors.indexed_colors]]
+index = 16
+color = '#ff9e64'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#db4b4b'
+
 #[cursor.style]
 #shape = "underline"
 
@@ -41,14 +50,18 @@ offset.x = 0
 offset.y = 1
 
 [font.normal]
-family = "0xProto Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [window]
 dynamic_padding = false
-opacity = 0.90
+#opacity = 0.90
 decorations = "transparent"
+padding = { x = 4, y = 4 }
 
 [window.dimensions]
-columns = 120
+columns = 100
 lines = 30
+
+[cursor]
+style = "Beam"
