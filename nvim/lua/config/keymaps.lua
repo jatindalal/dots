@@ -1,20 +1,10 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
 local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
 
--- Increment / decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
-
--- New tab
-keymap.set("n", "te", ":tabedit", opts)
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
@@ -27,10 +17,22 @@ keymap.set("n", "sj", "<C-w>j")
 keymap.set("n", "sl", "<C-w>l")
 
 
--- Resize window
-keymap.set("n", "<C-w><left>", "<C-w><")
-keymap.set("n", "<C-w><right>", "<C-w>>")
-keymap.set("n", "<C-w><up>", "<C-w>>+")
-keymap.set("n", "<C-w><down>", "<C-w>-")
+-- Resize split
+-- keymap.set("n", "<C-w><left>", ":vertical resize +10<Return>", opts)
+-- keymap.set("n", "<C-w><right>", ":vertical resize -10<Return>", opts)
+-- keymap.set("n", "<C-w><up>", ":horizontal resize +10<Return>", opts)
+-- keymap.set("n", "<C-w><down>", ":horizontal resize -10<Return>", opts)
 
+keymap.set("n", "<A-h>", ":vertical resize +10<Return>", opts)
+keymap.set("n", "<A-l>", ":vertical resize -10<Return>", opts)
+keymap.set("n", "<A-k>", ":horizontal resize +10<Return>", opts)
+keymap.set("n", "<A-j>", ":horizontal resize -10<Return>", opts)
+
+-- remove focus from terminal
 keymap.set('t', '<leader>t', [[<C-\><C-n>]], opts)
+
+-- New tab
+keymap.set("n", "<leader>to", ":tabnew<Return>", opts)
+keymap.set("n", "<leader>bd", ":tabclose<Return>", opts)
+keymap.set("n", "<s-h>", ":tabprev<Return>", opts)
+keymap.set("n", "<s-l>", ":tabnext<Return>", opts)

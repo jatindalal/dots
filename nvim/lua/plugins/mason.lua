@@ -1,15 +1,38 @@
 return {
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "shellcheck",
-        "shfmt",
-        "flake8",
-        "clangd",
-        "pyright"
-      },
+    dependencies = {
+        "williamboman/mason-lspconfig.nvim",
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
+    config = function()
+        local mason = require("mason")
+        local mason_lspconfig = require("mason-lspconfig")
+        local mason_tool_installer = require("mason-tool-installer")
+
+        mason.setup({
+          ui = {
+            icons = {
+              package_installed = "✓",
+              package_pending = "➜",
+              package_uninstalled = "✗",
+            },
+          },
+        })
+
+        mason_lspconfig.setup({
+          ensure_installed = {
+            "clangd",
+            "pyright",
+          },
+        })
+        mason_tool_installer.setup({
+          ensure_installed = {
+            "cmake-language-server",
+            "docker-compose-language-service",
+            "dockerfile-language-server"
+          },
+        })
+    end,
   },
 }

@@ -1,6 +1,6 @@
 return {
 	{
-		"telescope.nvim",
+                "telescope.nvim",
 		dependencies = {
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
@@ -90,16 +90,16 @@ return {
 			local actions = require("telescope.actions")
 			local fb_actions = require("telescope").extensions.file_browser.actions
 
-			opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
-				wrap_results = true,
-				layout_strategy = "horizontal",
-				layout_config = { prompt_position = "top" },
-				sorting_strategy = "ascending",
-				winblend = 0,
-				mappings = {
-					n = {},
-				},
-			})
+			-- opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
+			-- 	wrap_results = true,
+			-- 	layout_strategy = "horizontal",
+			-- 	layout_config = { prompt_position = "top" },
+			-- 	sorting_strategy = "ascending",
+			-- 	winblend = 0,
+			-- 	mappings = {
+			-- 		n = {},
+			-- 	},
+			-- })
 			opts.pickers = {
 				diagnostics = {
 					theme = "ivy",
