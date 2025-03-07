@@ -1,15 +1,28 @@
 return {
   {
-    'sainnhe/gruvbox-material',
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
+    opts = {},
     config = function()
-      vim.g.gruvbox_material_enable_italic = false
-      vim.g.gruvbox_material_background = 'light'
-      -- vim.g.gruvbox_material_background = 'hard'
-      vim.g.gruvbox_material_cursor = 'orange'
-      vim.g.gruvbox_material_transparent_background = '2'
-      vim.cmd.colorscheme('gruvbox-material')
-    end
+      local bg_dark = "#16161e"
+
+      require("tokyonight").setup({
+        style = "night",
+        terminal_colors = true,
+        styles = {
+          sidebars = "dark",
+          floats = "dark",
+        },
+        day_brightness = 0.3,
+        dim_inactive = false,
+        lualine_bold = false,
+        on_colors = function(colors)
+          colors.bg = bg_dark
+        end,
+      })
+      vim.cmd[[colorscheme tokyonight]]
+
+    end,
   }
 }
