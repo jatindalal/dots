@@ -1,28 +1,17 @@
 return {
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-      local bg_dark = "#16161e"
+	"shaunsingh/nord.nvim",
+	lazy = false,
+	priority = 1000,
 
-      require("tokyonight").setup({
-        style = "night",
-        terminal_colors = true,
-        styles = {
-          sidebars = "dark",
-          floats = "dark",
-        },
-        day_brightness = 0.3,
-        dim_inactive = false,
-        lualine_bold = false,
-        on_colors = function(colors)
-          colors.bg = bg_dark
-        end,
-      })
-      vim.cmd[[colorscheme tokyonight]]
+	config = function()
+		vim.g.nord_contrast = true
+		vim.g.nord_borders = false
+		vim.g.nord_disable_background = true
+		vim.g.nord_italic = false
+		vim.g.nord_uniform_diff_background = true
+		vim.g.nord_bold = false
 
-    end,
-  }
+		-- Load the colorscheme
+		require("nord").set()
+	end,
 }

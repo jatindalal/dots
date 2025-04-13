@@ -1,43 +1,43 @@
-return {
-  {
-    "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPre", "BufNewFile" },
-    build = ":TSUpdate",
-    dependencies = {
-        "windwp/nvim-ts-autotag",
-    },
-    config = function(_, opts)
-        require("nvim-treesitter.configs").setup(opts)
-    end,
-    opts = {
-      highlight = { enable = true },
-      indent = { enable = true },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
-          scope_incremental = false,
-          node_decremental = "<bs>",
-        },
-      },
-      ensure_installed = {
-        "bash",
-        "html",
-        "javascript",
-        "json",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "query",
-        "regex",
-        "tsx",
-        "typescript",
-        "vim",
-        "yaml",
-        "cpp",
-      },
-    },
-  },
+return { -- Highlight, edit, and navigate code
+	"nvim-treesitter/nvim-treesitter",
+	build = ":TSUpdate",
+	main = "nvim-treesitter.configs", -- Sets main module to use for opts
+	-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+	opts = {
+		ensure_installed = {
+			"lua",
+			"python",
+			"javascript",
+			"typescript",
+			"vimdoc",
+			"vim",
+			"regex",
+			"terraform",
+			"sql",
+			"dockerfile",
+			"toml",
+			"json",
+			"java",
+			"groovy",
+			"go",
+			"gitignore",
+			"graphql",
+			"yaml",
+			"make",
+			"cmake",
+			"markdown",
+			"markdown_inline",
+			"bash",
+			"tsx",
+			"css",
+			"html",
+			"cpp",
+		},
+		auto_install = true,
+		highlight = {
+			enable = true,
+			additional_vim_regex_highlighting = { "ruby" },
+		},
+		indent = { enable = true, disable = { "ruby" } },
+	},
 }
