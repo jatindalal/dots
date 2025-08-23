@@ -60,3 +60,7 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 
 -- remove focus from terminal
 vim.keymap.set("t", "<leader>t", [[<C-\><C-n>]], opts)
+
+-- cpp projects keybinds
+vim.keymap.set("n", "<leader>cf", "<cmd> terminal cmake . -B build <CR>", opts)
+vim.keymap.set("n", "<leader>cb", "<cmd> terminal cmake --build build -j$(nproc) <CR>", opts)

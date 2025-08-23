@@ -22,3 +22,4 @@ vim.opt.termguicolors = true
 vim.o.swapfile = false
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
+vim.opt.showmode = false

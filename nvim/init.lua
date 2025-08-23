@@ -26,7 +26,6 @@ require("lazy").setup({
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
 	require("plugins.alpha"),
-	require("plugins.remote"),
 	require("plugins.debugger"),
 	require("plugins.markdown"),
 	require("plugins.lazygit"),

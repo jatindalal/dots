@@ -217,21 +217,21 @@ return {
 			-- ts_ls = {},
 			-- tsserver = {},
 			ruff = {},
-			pylsp = {
-				settings = {
-					pylsp = {
-						plugins = {
-							pycodestyle = { enabled = false },
-							autopep8 = { enabled = false },
-							yapf = { enabled = false },
-							mccabe = { enabled = false },
-							pylsp_mypy = { enabled = false },
-							pylsp_black = { enabled = false },
-							pylsp_isort = { enabled = false },
-						},
-					},
-				},
-			},
+			-- pylsp = {
+			-- 	settings = {
+			-- 		pylsp = {
+			-- 			plugins = {
+			-- 				pycodestyle = { enabled = false },
+			-- 				autopep8 = { enabled = false },
+			-- 				yapf = { enabled = false },
+			-- 				mccabe = { enabled = false },
+			-- 				pylsp_mypy = { enabled = false },
+			-- 				pylsp_black = { enabled = false },
+			-- 				pylsp_isort = { enabled = false },
+			-- 			},
+			-- 		},
+			-- 	},
+			-- },
 			html = { filetypes = { "html", "twig", "hbs" } },
 			cssls = {},
 			tailwindcss = {},
@@ -242,17 +242,17 @@ return {
 			yamlls = {},
 			cmake = {},
 			--
-			-- pyright = {
-			--     settings = {
-			--         python = {
-			--             analysis = {
-			--                 -- autoSearchpaths = true,
-			--                 typeCheckingmode = "off",
-			--                 -- useLibraryCodeForTypes = true,
-			--             },
-			--         },
-			--     }
-			-- },
+			pyright = {
+				settings = {
+					python = {
+						analysis = {
+							autoSearchpaths = true,
+							typeCheckingmode = "off",
+							useLibraryCodeForTypes = true,
+						},
+					},
+				},
+			},
 			lua_ls = {
 				-- cmd = { ... },
 				-- filetypes = { ... },
