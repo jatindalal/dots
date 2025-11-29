@@ -25,9 +25,9 @@ vim.keymap.set("n", "<A-k>", ":horizontal resize +10<Return>", opts)
 vim.keymap.set("n", "<A-j>", ":horizontal resize -10<Return>", opts)
 
 -- Window management
-vim.keymap.set("n", "sv", "<C-w>v", opts) -- split window vertically
-vim.keymap.set("n", "ss", "<C-w>s", opts) -- split window horizontally
-vim.keymap.set("n", "se", "<C-w>=", opts) -- make split windows equal width & height
+vim.keymap.set("n", "sv", "<C-w>v", opts)     -- split window vertically
+vim.keymap.set("n", "ss", "<C-w>s", opts)     -- split window horizontally
+vim.keymap.set("n", "se", "<C-w>=", opts)     -- make split windows equal width & height
 vim.keymap.set("n", "sx", ":close<CR>", opts) -- close current split window
 
 -- Navigate between splits
@@ -37,10 +37,10 @@ vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", opts)
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", opts)
 
 -- Tabs
-vim.keymap.set("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
+vim.keymap.set("n", "<leader>to", ":tabnew<CR>", opts)   -- open new tab
 vim.keymap.set("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
-vim.keymap.set("n", "<s-h>", ":tabp<CR>", opts) --  go to next tab
-vim.keymap.set("n", "<s-l>", ":tabn<CR>", opts) --  go to previous tab
+vim.keymap.set("n", "<s-h>", ":tabp<CR>", opts)          --  go to next tab
+vim.keymap.set("n", "<s-l>", ":tabn<CR>", opts)          --  go to previous tab
 
 -- Toggle line wrapping
 vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", opts)
@@ -59,7 +59,7 @@ vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open float
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 -- remove focus from terminal
-vim.keymap.set("t", "<leader>t", [[<C-\><C-n>]], opts)
+-- vim.keymap.set("t", "<leader>t", [[<C-\><C-n>]], opts)
 
 -- cpp projects keybinds
 vim.keymap.set("n", "<leader>cf", "<cmd> terminal cmake . -B build <CR>", opts)
