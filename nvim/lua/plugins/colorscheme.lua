@@ -66,7 +66,18 @@ return {
 				end,
 			})
 			-- load the colorscheme here
-			vim.cmd([[colorscheme tokyonight]])
+			-- vim.cmd([[colorscheme tokyonight]])
+		end,
+	},
+	{
+		"sainnhe/everforest",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.everforest_background = "hard" -- soft | medium | hard
+			vim.g.everforest_enable_italic = 0
+			vim.g.everforest_better_performance = 1
+			vim.cmd.colorscheme("everforest")
 		end,
 	},
 }

@@ -83,8 +83,8 @@ return {
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				-- theme = "seoul256", -- Set theme based on environment variable
-				theme = my_lualine_theme,
+				theme = "everforest", -- Set theme based on environment variable
+				-- theme = my_lualine_theme,
 				section_separators = { left = "", right = "" },
 				component_separators = { left = "|", right = "|" },
 				disabled_filetypes = { "alpha", "neo-tree" },

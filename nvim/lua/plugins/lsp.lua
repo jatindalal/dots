@@ -10,7 +10,7 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 		-- Useful status updates for LSP.
-		{ "j-hui/fidget.nvim", opts = {} },
+		{ "j-hui/fidget.nvim",       opts = {} },
 
 		-- Allows extra capabilities provided by blink.cmp
 		"saghen/blink.cmp",
@@ -94,6 +94,8 @@ return {
 				--  Useful when you're not sure what type a variable is and you want to see
 				--  the definition of its *type*, not where it was *defined*.
 				map("grt", require("telescope.builtin").lsp_type_definitions, "[G]oto [T]ype Definition")
+
+				map("gs", vim.lsp.buf.signature_help, "[G]oto [S]ignature")
 
 				-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
 				---@param client vim.lsp.Client

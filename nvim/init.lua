@@ -29,4 +29,5 @@ require("lazy").setup({
 	require("plugins.debugger"),
 	require("plugins.markdown"),
 	require("plugins.lazygit"),
+	require("plugins.term"),
 })
