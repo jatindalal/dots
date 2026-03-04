@@ -1,20 +1,25 @@
-#background = 010101
-# background = 010701
-background = 020a01
-background-opacity = 0.9
-window-theme = ghostty
-window-titlebar-background = 010101
-macos-titlebar-style = tabs  
-theme = iTerm2 Dark Background
-font-size = 15
-font-family = Maple Mono NF
-window-padding-balance = true
+background = 010101
+background-opacity = 0.95
+background-blur=40
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+theme = Kanagawa Wave
+window-height = 24
+window-width = 80
+window-padding-x = 4
+window-padding-y = 4
+
+font-family = Iosevka Nerd Font
+font-size = 18
+font-thicken = true
+
 cursor-style = bar
-cursor-color = ee0000
-cursor-text = 010101
-confirm-close-surface = false
+
 term = xterm-256color
-adjust-cursor-thickness=50%
-background-blur=true
-window-height=30
-window-width=80
+
+confirm-close-surface = false
+macos-titlebar-style = tabs
+command = /opt/homebrew/bin/fish -c "tmux -u attach -t main 2>/dev/null || tmux -u new -s main"
